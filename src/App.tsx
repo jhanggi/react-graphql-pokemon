@@ -1,8 +1,6 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import CardLaunchpad from "./components/Card";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import "./App.css";
+import PokemonForm from "./components/PokemonForm";
 
 const client = new ApolloClient({
   uri: "https://graphql-pokemon2.vercel.app/",
@@ -13,7 +11,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <div className="App">
-        <CardLaunchpad name="pikachu" />
+        <PokemonForm />
       </div>
     </ApolloProvider>
   );
